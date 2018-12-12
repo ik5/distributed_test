@@ -1,0 +1,14 @@
+l: 216
+t: 2
+
+{
+  "check_etc_hosts_has_8888": {
+    "path": "/etc/hosts",
+    "type": "file_contains",
+    "check": "8.8.8.8"
+  },
+  "check_log_file_exists": {
+    "path": "/var/log/messages.text",
+    "type": "file_exists"
+  }
+}

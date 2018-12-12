@@ -1,0 +1,23 @@
+---
+# can be debug or production
+env: "debug"
+
+listen: ":8083"
+
+# how much time with no heartbeat is acceptable (in seconds)
+# 5 minutes
+orchestration_uptime: 300
+
+orchestrations:
+  - "127.0.0.1:8082"
+
+log_file: "debug.log"
+log_level: "trace"
+# log_level: "debug"
+
+use_syslog: false
+syslog_socket_type: "udp"
+syslog_address: "localhost:514"
+syslog_tag: ""
+syslog_facility: "local7"
+syslog_level: "debug"

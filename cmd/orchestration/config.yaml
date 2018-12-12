@@ -1,0 +1,26 @@
+---
+# can be debug or production
+env: "debug"
+
+parent: "127.0.0.1:8083"
+listen: ":8082"
+# every 120 seconds (in millisecond)
+heartbeat_every: 120000
+
+# how much time with no heartbeat is acceptable (in seconds)
+# 5 minutes
+node_uptime: 300
+
+nodes:
+  - "127.0.0.1:8081"
+
+log_file: "debug.log"
+log_level: "trace"
+# log_level: "debug"
+
+use_syslog: false
+syslog_socket_type: "udp"
+syslog_address: "localhost:514"
+syslog_tag: ""
+syslog_facility: "local7"
+syslog_level: "debug"
